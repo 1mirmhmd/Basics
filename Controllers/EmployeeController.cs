@@ -8,5 +8,13 @@ namespace Basics.Controllers
         {
             return "Hello World!";
         }
+        public ViewResult Index2()
+        {
+            return View("Index");
+        }
+        public IActionResult Index3()
+        {
+            return Content("Employee");
+        }
     }
 }
