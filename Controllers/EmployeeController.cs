@@ -1,12 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 
 namespace Basics.Controllers
 {
     public class EmployeeController : Controller
     {
-        public String Index()
+        public IActionResult Index1()
         {
-            return "Hello World!";
+            string message =$"Hello World. {DateAndTime.Now.ToString()}";
+            return View("Index1",message);
         }
         public ViewResult Index2()
         {
